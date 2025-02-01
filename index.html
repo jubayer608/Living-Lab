@@ -27,6 +27,7 @@
                 'color-1': 'rgb(255, 220, 38)',
                 'bg-color': 'rgb(255, 249, 244);',
                 'text-color': 'rgb(17, 17, 17);',
+                'footer': 'rgba(255, 220, 38, 0.5);',
               }
             }
           }
@@ -38,44 +39,42 @@
         .adlam-font{
       font-family: "ADLaM Display", serif;
     }
-    .gradient{
-      background: linear-gradient(134.71deg, rgb(248, 204, 251) 1.286%,rgb(172, 210, 253) 100%);
-    }
-    .gradient-1{
-      background: linear-gradient(134.71deg, rgb(255, 249, 244) 1.511%,rgb(249, 223, 138) 100%);
-    }
     </style>
 </head>
 <body>
     <!-- header section -->
     <header>
         <!-- navbar -->
-        <nav class="flex justify-between bg-bg-color items-center md:px-36">
+        <nav class="flex justify-between bg-bg-color items-center sm:px-36">
           <div class="flex items-center sora-font font-normal text-2xl py-6">
-              <img src="images/logo-header.png" alt="">
-              <span class="px-3">Browse<span class="text-color-1">4</span>Pets</span>
+              <img src="images/logo-header.png" alt="" class="hidden sm:block">
+              <div class=" flex items-center gap-x-72 pb-2 border-b-2 border-b-solid border-b-gray-400 ">
+                <img src="images/logo-header.png" alt="" class="block sm:hidden pl-4">
+                <i class="fa-solid fa-bars block sm:hidden"></i>
+             </div>
+              <span class="px-3 hidden md:block lg:block">Browse<span class="text-color-1">4</span>Pets</span>
           </div>
-          <div>
-              <ul class="flex space-x-8">
+          <div class="hidden sm:block">
+              <ul class="md:flex md:space-x-8">
                   <li class="text-text-color sora-font font-normal text-xl">Find a pet</li>
                   <li class="text-text-color sora-font font-normal text-xl">Breeds</li>
                   <li class="text-text-color sora-font font-normal text-xl">Contact us</li>
               </ul>
           </div>
           <div class="flex items-center">
-              <i class="fa-regular fa-bell mx-4"></i>
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <button class="btn border border-solid border-color-1 rounded-lg px-6 py-2 mx-3 sora-font text-xl text-text-color"> 
+              <i class="fa-regular fa-bell mx-4 hidden sm:block"></i>
+              <i class="fa-solid fa-magnifying-glass hidden sm:block"></i>
+              <button class="btn border border-solid border-color-1 rounded-lg px-6 py-2 mx-3 sora-font text-xl text-text-color hidden sm:block"> 
                   Login</button>
-              <button class=" btn rounded-lg bg-color-1 sora-font px-6 py-2 text-xl text-text-color">Register</button>
+              <button class=" btn rounded-lg bg-color-1 sora-font px-6 py-2 text-xl text-text-color hidden sm:block">Register</button>
           </div>
       </nav>
         <!-- banner-section -->
-        <div class="hero min-h-screen md:relative md:w-[1320px] md:mx-36 md:mt-20 ">
+        <div class="hero min-h-screen ml-4 sm:relative sm:w-[1320px]  sm:mx-36 sm:mt-20">
             <div class=" flex-col-reverse">
-              <div class="md:absolute">
-                <h1 class=" text-3xl md:text-5xl font-normal text-text-color adlam-font ">Pamper Your Pet, <br> Because They Deserve <br> the Bes</h1>
-                <p class="py-6 text-text-color sora-font font-normal text-xs md:text-xl">
+              <div class="sm:absolute">
+                <h1 class=" text-5xl font-normal text-text-color adlam-font ">Pamper Your Pet, <br> Because They Deserve <br> the Bes</h1>
+                <p class="py-6 text-text-color sora-font font-normal text-xl">
                     Discover a world of treats, toys, and essentials handpicked for <br> your furry friends. Shop now and make tails wag with joy!
                 </p>
                 <button class="btn rounded-lg bg-color-1 sora-font px-6 py-2 text-xl text-text-color">Find a pet</button>
@@ -87,9 +86,9 @@
     <!-- main section -->
     <main>
         <!-- category-section -->
-         <div class="md:mb-28 md:mx-36">
+         <div class="ml-5 sm:mb-28 sm:mx-36">
          <div>
-            <h3 class="text-3xl my-6 md:text-4xl font-normal text-text-color adlam-font md:mb-12">Browse By Categories</h3>
+            <h3 class=" my-6 text-4xl font-normal text-text-color adlam-font sm:mb-12">Browse By Categories</h3>
          </div>
          <div class="grid grid-cols-2 gap-4 md:grid-cols-6 md:gap-6  ">
          <div class="card  w-[200px] bg-color-1 rounded-xl  ">
@@ -102,7 +101,6 @@
             <div class="card-body items-center text-center">
               <h2 class="card-title text-xl adlam-font">Dog</h2>
               <p class="sora-font">3 Items</p>
-              
             </div>
           </div>
          <div class="card  w-[200px] bg-color-1 rounded-xl  ">
@@ -173,11 +171,12 @@
         </div>
     </div>
     <!-- trending-section -->
-     <div class="w-full bg-bg-color md:px-36 md:pt-36 md:pb-36">
+     <section class=" bg-bg-color">
+     <div class="w-full pl-3 sm:px-36 sm:pt-36 sm:pb-36">
      <div>
-      <h3 class="text-4xl text-text-color adlam-font pb-10">Trending Pet Products</h3>
+      <h3 class="text-4xl text-text-color adlam-font my-5 sm:pb-10">Trending Pet Products</h3>
      </div>
-     <div class=" md:flex gap-4 ">
+     <div class=" sm:flex gap-x-4">
      <div class="relative w-[424px] h-[400px] bg-color-1 rounded-lg pt-10 pl-7">
       <div class="absolute">
         <h3 class="text-4xl text-text-color sora-font">T-Shirts For Dogs</h3>
@@ -189,10 +188,11 @@
       </div>
     </div>
           <!-- card-section -->
-           <div class="grid grid-cols-2 md:grid-cols-3 gap-x-9 gap-y-4">
+              
+           <div class="grid grid-cols-2 gap-x-3 sm:grid-cols-3 sm:gap-x-7">
             <div class="card card-side w-[275px] h-[118px] bg-white items-center pl-4">
               <figure>
-                <img class="border border-solid border-x-cyan-50 rounded-lg p-6 bg-bg-color" src="images/dog-cartoon.png" alt="">
+                <img class="border border-solid border-x-cyan-50 rounded-lg p-4 bg-bg-color" src="images/dog-cartoon.png" alt="">
               </figure>
               <div class="card-body">
                 <p class="sora-font text-text-color">⭐4.5</p>
@@ -202,7 +202,7 @@
             </div>
             <div class="card card-side w-[275px] h-[118px] bg-white items-center pl-4">
               <figure>
-                <img class="border border-solid border-x-cyan-50 rounded-lg p-6 bg-bg-color" src="images/fish-cartoon.png" alt="">
+                <img class="border border-solid border-x-cyan-50 rounded-lg p-4 bg-bg-color" src="images/fish-cartoon.png" alt="">
               </figure>
               <div class="card-body">
                 <p class="sora-font text-text-color">⭐4.5</p>
@@ -212,7 +212,7 @@
             </div>
             <div class="card card-side w-[275px] h-[118px] bg-white items-center pl-4">
               <figure>
-                <img class="border border-solid border-x-cyan-50 rounded-lg p-6 bg-bg-color" src="images/bird-cartoon.png" alt="">
+                <img class="border border-solid border-x-cyan-50 rounded-lg p-4 bg-bg-color" src="images/bird-cartoon.png" alt="">
               </figure>
               <div class="card-body">
                 <p class="sora-font text-text-color">⭐4.5</p>
@@ -222,7 +222,7 @@
             </div>
             <div class="card card-side w-[275px] h-[118px] bg-white items-center pl-4">
               <figure>
-                <img class="border border-solid border-x-cyan-50 rounded-lg p-6 bg-bg-color" src="images/rabbit-cartoon.png" alt="">
+                <img class="border border-solid border-x-cyan-50 rounded-lg p-4 bg-bg-color" src="images/rabbit-cartoon.png" alt="">
               </figure>
               <div class="card-body">
                 <p class="sora-font text-text-color">⭐4.5</p>
@@ -232,7 +232,7 @@
             </div>
             <div class="card card-side w-[275px] h-[118px] bg-white items-center pl-4">
               <figure>
-                <img class="border border-solid border-x-cyan-50 rounded-lg p-6 bg-bg-color" src="images/bird-cartoon.png" alt="">
+                <img class="border border-solid border-x-cyan-50 rounded-lg p-4 bg-bg-color" src="images/bird-cartoon.png" alt="">
               </figure>
               <div class="card-body">
                 <p class="sora-font text-text-color">⭐4.5</p>
@@ -242,7 +242,7 @@
             </div>
             <div class="card card-side w-[275px] h-[118px] bg-white items-center pl-4">
               <figure>
-                <img class="border border-solid border-x-cyan-50 rounded-lg p-6 bg-bg-color" src="images/pet-couch.png" alt="">
+                <img class="border border-solid border-x-cyan-50 rounded-lg p-4 bg-bg-color" src="images/pet-couch.png" alt="">
               </figure>
               <div class="card-body">
                 <p class="sora-font text-text-color">⭐4.5</p>
@@ -252,7 +252,7 @@
             </div>
             <div class="card card-side w-[275px] h-[118px] bg-white items-center pl-4">
               <figure>
-                <img class="border border-solid border-x-cyan-50 rounded-lg p-6 bg-bg-color" src="images/fish-cartoon.png" alt="">
+                <img class="border border-solid border-x-cyan-50 rounded-lg p-4 bg-bg-color" src="images/fish-cartoon.png" alt="">
               </figure>
               <div class="card-body">
                 <p class="sora-font text-text-color">⭐4.5</p>
@@ -262,7 +262,7 @@
             </div>
             <div class="card card-side w-[275px] h-[118px] bg-white items-center pl-4">
               <figure>
-                <img class="border border-solid border-x-cyan-50 rounded-lg p-6 bg-bg-color" src="images/pet-couch.png" alt="">
+                <img class="border border-solid border-x-cyan-50 rounded-lg p-4 bg-bg-color" src="images/pet-couch.png" alt="">
               </figure>
               <div class="card-body">
                 <p class="sora-font text-text-color">⭐4.5</p>
@@ -270,9 +270,9 @@
                 <p class="sora-font font-medium text-text-color">$39.99</p>
               </div>
             </div>
-            <div class="card card-side w-[275px] h-[118px] bg-white items-center pl-4">
+            <div class="card card-side w-[275px] h-[118px] bg-white  items-center pl-4">
               <figure>
-                <img class="border border-solid border-x-cyan-50 rounded-lg p-6 bg-bg-color" src="images/rabbit-cartoon.png" alt="">
+                <img class="border border-solid border-x-cyan-50 rounded-lg p-4 bg-bg-color" src="images/rabbit-cartoon.png" alt="">
               </figure>
               <div class="card-body">
                 <p class="sora-font text-text-color">⭐4.5</p>
@@ -282,32 +282,58 @@
             </div>
           </div>
         </div>
-      
-        
-    </main>
-    <!-- footer section  -->
-    <footer>
-      <section class="md:mx-36 md:my-36">
+      </section>
+      <!-- price-section -->
+      <section class=" pl-3 sm:mx-36 sm:mt-36 my-5">
         <div> <h3 class="text-4xl text-text-color adlam-font mb-12">Everyday low Price</h3> </div>
-        <div class=" md:flex md:gap-6">
-        <div class="flex w-[784px] items-center justify-center rounded-xl gradient">
+        <div class="sm:flex gap-6 ">
+        <div class="flex w-[400px] h-[339px] sm:w-[784px] sm:h-[480px] items-center justify-center rounded-xl bg-[linear-gradient(134.71deg,rgb(248,204,251)1.286%,rgb(172,210,253)100%)]">
             <div class="">
-              <p class="sora-font text-black text-xl">Under Price</p>
-              <h3 class="text-3xl adlam-font text-black">Pet Grooming Mitt</h1>
-              <p class="py-6 adlam-font text-white text-2xl">(Easy Hair Removal) </p>
-              <h3 class="adlam-font text-black text-6xl">$7.99</h3>
+              <p class="sora-font text-black text-xl hidden sm:block">Under Price</p>
+              <h3 class="text-3xl adlam-font text-black hidden sm:block">Pet Grooming Mitt</h1>
+              <h3 class=" adlam-font text-black pl-12 pb-3 block sm:hidden text-3xl ">Pet Grooming Mitt</h1>
+              <p class="py-6 adlam-font text-white text-2xl hidden sm:block">(Easy Hair Removal) </p>
+              <h3 class="adlam-font text-black text-6xl hidden sm:block">$7.99</h3>
+              <h3 class="adlam-font text-black text-6xl pl-12 pb-32 block sm:hidden">$7.99</h3>
             </div>
-            <div><img src="images/cute-dog-mid.png" alt=""></div>
+            <div><img src="images/cute-dog-mid.png" alt="" class="w-[382px] h-[480px] hidden sm:block"></div>
+            <div><img src="images/cute-dog-mid.png" alt="" class="w-[214px] h-[268px] pt-20 block sm:hidden"></div>
         </div>
-        <div class="w-[512px] bg-color-1 rounded-xl gradient-1">
+        <div class="sm:w-[512px] sm:h-[480px] bg-color-1 rounded-xl bg-[linear-gradient(134.71deg,rgb(255,249,244)1.511%,rgb(249,223,138)100%)]">
           <h3 class="text-3xl adlam-font text-black pl-12 pt-10">T-Shirt for Dogs</h3>
           <h3 class="adlam-font text-color-1 text-6xl pl-12 pt-10">$7.99</h3>
-          <img class="pl-56 pt-20" src="images/cute-pet-mid.png" alt="">
+          <img class="pl-56 " src="images/cute-pet-mid.png" alt="">
         </div>
       </div> 
         </section>
-        
-          <section class="footer bg-color-1 text-base-content p-10">
+         <!-- her0-card -->
+         <section class=" sm:w-[1320px] sm:h-[491px] mx-auto relative">
+          <div class="hero bg-bg-color absolute top-80">
+            <div class="hero-content flex-col items-center lg:flex-row">
+              <img
+                src="images/cute-pet-mid.png"
+                class="max-w-sm"/>
+              <div>
+                <h3 class="adlam-font text-4xl text-text-color">Get awesome News!</h3>
+                <p class="py-6 sora-font text-xl text-text-color">Exclusive training tips, ticks, product deals and more.</p>
+                <input
+                   type="text"
+                   placeholder="Enter Email"
+                   class="input input-bordered input-md w-full max-w-xs my-9" />
+                 <br>
+                <button class=" btn rounded-lg bg-color-1 sora-font px-6 py-2 text-xl text-text-color">Subscribe</button>
+              </div>
+              <div>
+          </div>
+        </section>
+
+    </main>
+    <!-- footer section  -->
+    <footer>
+      
+       
+        <!-- footer-section -->
+          <section class="footer bg-footer text-base-content p-10 mt-10 sm:pt-[350px] sm:pb-36 sm:px-32">
             <nav>
               <div class="flex items-center sora-font font-normal text-2xl py-6">
                 <img src="images/logo-footer.png" alt="">
